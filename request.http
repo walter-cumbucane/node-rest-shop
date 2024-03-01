@@ -10,6 +10,8 @@ DELETE http://localhost:3000/products/65db86275139f4ba31968c83
 Content-Type: application/json
 
 
+
+
 ###
 GET http://localhost:3000/orders
 Content-Type: application/json
@@ -21,3 +23,11 @@ Content-Type: application/json
 {
     "productID": "65dfae0ab1ec490d02d5ae01"
 }
+
+###
+GET http://localhost:3000/orders/65e2344aefecb966c5fee362
+Content-Type: application/json
+
+###
+DELETE http://localhost:3000/orders/65e2344aefecb966c5fee362
+Content-Type: application/json

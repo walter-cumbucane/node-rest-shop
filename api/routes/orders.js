@@ -74,7 +74,6 @@ router.get('/:orderID', (req, res, next) => {
     Order.findOne({_id: id})
     .exec()
     .then(result => {
-        console.log(result);
         if (result) {
             res.status(200).json(result);
         } else {
@@ -101,7 +100,6 @@ router.delete('/:orderID', (req, res, next) => {
     Order.deleteOne({_id: id })
     .exec()
     .then(result => {
-        console.log(result);
         res.status(200).json(result);
     })
     .catch(err => {
