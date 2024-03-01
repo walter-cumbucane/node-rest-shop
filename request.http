@@ -1,0 +1,23 @@
+GET http://localhost:3000/products
+Content-Type: application/json
+
+###
+GET http://localhost:3000/products/65da48614be87631b7880a12
+Content-Type: application/json
+
+###
+DELETE http://localhost:3000/products/65db86275139f4ba31968c83
+Content-Type: application/json
+
+
+###
+GET http://localhost:3000/orders
+Content-Type: application/json
+
+###
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+    "product": "65dfae0ab1ec490d02d5ae01"
+}
