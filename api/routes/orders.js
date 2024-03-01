@@ -14,13 +14,12 @@ const Product = require('../models/products');
 router.get('/', (req, res, next) => {
     
     Order.find()
+    .populate('product', 'name price')
     .exec()
     .then(result => {
-        console.log(result);
         res.status(200).json(result);
     })
     .catch(err => {
-        console.log(err);
         res.status(500).json({
             error: err
         });
@@ -72,6 +71,7 @@ router.get('/:orderID', (req, res, next) => {
 
     //Extracts the object with the given ID
     Order.findOne({_id: id})
+    .populate('product', 'name price')
     .exec()
     .then(result => {
         if (result) {
