@@ -33,12 +33,11 @@ router.post('/', (req, res, next) => {
 
     // Parses the received data from the request body
     const quantity = req.body.quantity;
-    const id = req.body.product;
+    const id = req.body.productID;
 
     Product.findById(id).
     then( product => {
         if (!product) {
-            console.log(product);
             return res.status(404).json({
                 message: 'Product not found'
             });
@@ -47,19 +46,17 @@ router.post('/', (req, res, next) => {
         const order = new Order({
             _id: new mongoose.Types.ObjectId(),
             quantity: quantity,
-            product: id
+            productID: id
         });    
         return order.save();
     }).
     then(result => {
-        console.log(result);
         res.status(201).json({
             message: 'Data Saved in the Server',
             createdObject: result
         });
     }).
     catch(err => {
-        console.log(err);
         res.status(500).json({
             error: err
         });
