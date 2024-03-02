@@ -14,10 +14,23 @@ const Product = require('../models/products');
 router.get('/', (req, res, next) => {
     
     Order.find()
-    .populate('product', 'name price')
+    .populate('product', 'name')
     .exec()
-    .then(result => {
-        res.status(200).json(result);
+    .then(docs => {
+        response = {
+            count: docs.length,
+            orders: docs.map(doc => { 
+                return {
+                    product: doc.product,
+                    _id: doc._id,
+                    request: {
+                        method: "GET",
+                        url: "http://localhost:3000/orders/" + doc._id
+                    }
+                }
+            })
+        };
+        res.status(200).json(response);
     })
     .catch(err => {
         res.status(500).json({
@@ -73,9 +86,18 @@ router.get('/:orderID', (req, res, next) => {
     Order.findOne({_id: id})
     .populate('product', 'name price')
     .exec()
-    .then(result => {
-        if (result) {
-            res.status(200).json(result);
+    .then(doc => {
+        if (doc) {
+            response = {
+                product: doc,
+                _id: id,
+                request: {
+                    method: 'GET',
+                        description: 'GET ALL PRODUCTS',
+                        url: 'http://localhost:3000/orders'
+                }
+            };
+            res.status(200).json(response);
         } else {
             res.status(404).json({
                 message: 'No entry founded for the provided ID'
