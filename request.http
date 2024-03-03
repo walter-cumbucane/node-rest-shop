@@ -25,7 +25,7 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/orders/65e0d6037c9d3f7711d4c007
+GET http://localhost:3000/orders/65e0d6037c9d3f7711d4c007c
 Content-Type: application/json
 
 ###
