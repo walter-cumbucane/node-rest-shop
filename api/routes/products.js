@@ -8,6 +8,10 @@ const router = express.Router();
 const Product = require('../models/products');
 const mongoose = require('mongoose');
 
+//It is used to allow file upload features
+const multer = require('multer');
+
+
 //Let's create a GET route for this resource
 /* In the app.js file, we guarranted that only requests with '/products' will come to this router,
 * we don't have to include the '/products' again in the path   jfjf
@@ -50,7 +54,6 @@ router.post('/', (req, res, next) =>{
         price: req.body.price
     };
     */
-
     // To store the object, we create a new instance of the Product's model. And as the argument to the class, we pass the object to be stored
     const product = new Product({
 

@@ -11,6 +11,7 @@ const mongoose = require('mongoose');
 //We import the resources' routers
 const productRouter = require('./api/routes/products');
 const orderRouter = require('./api/routes/orders');
+const userRouter = require('./api/routes/user');
 
 
 //Sets a middleware. Every incoming request goes through a middleware
@@ -56,6 +57,9 @@ app.use('/products', productRouter);
 
 // Redirects requests to the orders file
 app.use('/orders', orderRouter);
+
+// Redirects requests to the user file
+app.use('/user', userRouter);
 
 //Let's add some error handling logic now
 /* If a request gets past the last two middlewares, it means that we didn't set up an infrastructure
