@@ -46,6 +46,10 @@ POST http://localhost:3000/user/signup
 Content-Type: application/json
 
 {
-    "email": "tester@test.com",
+    "email": "tester2",
     "password": "abcdelgkj"
 }
+
+###
+DELETE http://localhost:3000/user/65e77cca2c22b05d0ab07442
+Content-Type: application/json
