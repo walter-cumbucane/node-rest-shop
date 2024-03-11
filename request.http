@@ -42,6 +42,16 @@ Content-Type: application/json
 }
 
 ###
+POST http://localhost:3000/user/login 
+Content-Type: application/json
+
+{
+    "email": "random@net.com",
+    "password": "1234faba"
+}
+
+
+###
 POST http://localhost:3000/user/signup
 Content-Type: application/json
 
