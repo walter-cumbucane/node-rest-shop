@@ -2,13 +2,24 @@ GET http://localhost:3000/products
 Content-Type: application/json
 
 ###
-GET http://localhost:3000/products/65da48614be87631b7880a18
+GET http://localhost:3000/products/65f21fc329e30ff38eba88b4
 Content-Type: application/json
 
 ###
-DELETE http://localhost:3000/products/65db86275139f4ba31968c83
+DELETE http://localhost:3000/products/65f21fc329e30ff38eba88b4
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhbmRvbUBuZXQuY29tIiwidXNlcklEIjoiNjVlNzc1NTJiNGU2NDIwZjVkMDcyMTRjIiwiaWF0IjoxNzEwMzY2NjAxLCJleHAiOjE3MTAzNzAyMDF9.OJuOlrGdCN7dl7GQ0sE6_zwCsyu6sVh4FjpqsfKMXBo
+
+
+###
+POST http://localhost:3000/products
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhbmRvbUBuZXQuY29tIiwidXNlcklEIjoiNjVlNzc1NTJiNGU2NDIwZjVkMDcyMTRjIiwiaWF0IjoxNzEwMzY2NjAxLCJleHAiOjE3MTAzNzAyMDF9.OJuOlrGdCN7dl7GQ0sE6_zwCsyu6sVh4FjpqsfKMXBo
 Content-Type: application/json
 
+{
+    "name": "test1",
+    "price": 6
+}
 
 
 
