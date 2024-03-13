@@ -53,13 +53,13 @@ app.use((req, res, next) => {
   
 /* Sets a middleware that will redirect every request with the '/products' resource to the productRouter
 */
-app.use('/products', productRouter);
+app.use('/api/v1/products', productRouter);
 
 // Redirects requests to the orders file
-app.use('/orders', orderRouter);
+app.use('/api/v1/orders', orderRouter);
 
 // Redirects requests to the user file
-app.use('/user', userRouter);
+app.use('/api/v1/user', userRouter);
 
 //Let's add some error handling logic now
 /* If a request gets past the last two middlewares, it means that we didn't set up an infrastructure
