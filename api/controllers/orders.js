@@ -29,7 +29,7 @@ exports.get_all = (req, res, next) => {
             error: err
         });
     });
-};
+}
 
 exports.get_by_id = (req, res, next) => {
     
@@ -64,7 +64,7 @@ exports.get_by_id = (req, res, next) => {
             error: err
         });
     });
-};
+}
 
 exports.delete = (req, res, next) => {
     
@@ -83,7 +83,7 @@ exports.delete = (req, res, next) => {
             error: err
         });
     });
-};
+}
 
 exports.create_order = (req, res, next) => {
 
@@ -117,4 +117,4 @@ exports.create_order = (req, res, next) => {
             error: err
         });
     });
-};
+}

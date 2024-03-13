@@ -2,18 +2,18 @@ GET http://localhost:3000/products
 Content-Type: application/json
 
 ###
-GET http://localhost:3000/products/65f21fc329e30ff38eba88b4
+GET http://localhost:3000/products/65da48614be87631b7880a12
 Content-Type: application/json
 
 ###
-DELETE http://localhost:3000/products/65f21fc329e30ff38eba88b4
+DELETE http://localhost:3000/products/65f222596fb0cef38149a152
 Content-Type: application/json
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhbmRvbUBuZXQuY29tIiwidXNlcklEIjoiNjVlNzc1NTJiNGU2NDIwZjVkMDcyMTRjIiwiaWF0IjoxNzEwMzY2NjAxLCJleHAiOjE3MTAzNzAyMDF9.OJuOlrGdCN7dl7GQ0sE6_zwCsyu6sVh4FjpqsfKMXBo
 
 
 ###
 POST http://localhost:3000/products
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhbmRvbUBuZXQuY29tIiwidXNlcklEIjoiNjVlNzc1NTJiNGU2NDIwZjVkMDcyMTRjIiwiaWF0IjoxNzEwMzY2NjAxLCJleHAiOjE3MTAzNzAyMDF9.OJuOlrGdCN7dl7GQ0sE6_zwCsyu6sVh4FjpqsfKMXBo
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhbmRvbUBuZXQuY29tIiwidXNlcklEIjoiNjVlNzc1NTJiNGU2NDIwZjVkMDcyMTRjIiwiaWF0IjoxNzEwMzcwMjUxLCJleHAiOjE3MTAzNzM4NTF9.FLpTK9v5DCwNtBLZd7ola8KwJg7EVjkpfhuvoAU2srI
 Content-Type: application/json
 
 {
@@ -26,22 +26,27 @@ Content-Type: application/json
 ###
 GET http://localhost:3000/orders
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhbmRvbUBuZXQuY29tIiwidXNlcklEIjoiNjVlNzc1NTJiNGU2NDIwZjVkMDcyMTRjIiwiaWF0IjoxNzEwMzcwMjUxLCJleHAiOjE3MTAzNzM4NTF9.FLpTK9v5DCwNtBLZd7ola8KwJg7EVjkpfhuvoAU2srI
 
 ###
 POST http://localhost:3000/orders
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhbmRvbUBuZXQuY29tIiwidXNlcklEIjoiNjVlNzc1NTJiNGU2NDIwZjVkMDcyMTRjIiwiaWF0IjoxNzEwMzcwMjUxLCJleHAiOjE3MTAzNzM4NTF9.FLpTK9v5DCwNtBLZd7ola8KwJg7EVjkpfhuvoAU2srI
 
 {
-    "productID": "65dfae0ab1ec490d02d5ae01"
+    "product": "65f22d5e90e842d72d761629"
 }
 
 ###
-GET http://localhost:3000/orders/65e0d6037c9d3f7711d4c007c
+GET http://localhost:3000/orders/65e0d6037c9d3f7711d4c007
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhbmRvbUBuZXQuY29tIiwidXNlcklEIjoiNjVlNzc1NTJiNGU2NDIwZjVkMDcyMTRjIiwiaWF0IjoxNzEwMzcwMjUxLCJleHAiOjE3MTAzNzM4NTF9.FLpTK9v5DCwNtBLZd7ola8KwJg7EVjkpfhuvoAU2srI
 
 ###
-DELETE http://localhost:3000/orders/65e2344aefecb966c5fee362
+DELETE http://localhost:3000/orders/65e230491bea4cea9db748b5
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhbmRvbUBuZXQuY29tIiwidXNlcklEIjoiNjVlNzc1NTJiNGU2NDIwZjVkMDcyMTRjIiwiaWF0IjoxNzEwMzcwMjUxLCJleHAiOjE3MTAzNzM4NTF9.FLpTK9v5DCwNtBLZd7ola8KwJg7EVjkpfhuvoAU2srI
+
 
 ###
 POST http://localhost:3000/user/signup
@@ -67,7 +72,7 @@ POST http://localhost:3000/user/signup
 Content-Type: application/json
 
 {
-    "email": "tester2",
+    "email": "tester2@mail.com",
     "password": "abcdelgkj"
 }
 
